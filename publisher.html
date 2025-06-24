@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WebRTC Publisher - Ant Media</title>
+  <link rel="stylesheet" href="./styles/publisher-style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>WebRTC Publisher</h2>
+
+    <video id="localVideo" autoplay muted playsinline width="640" height="480" class="video-box"></video>
+
+    <div class="input-group">
+      <label for="streamIdInput">Stream Name:</label>
+      <input type="text" id="streamIdInput" placeholder="Enter Stream ID" />
+    </div>
+
+    <div class="input-group">
+      <label for="modeSelect">Select Mode:</label>
+      <select id="modeSelect">
+        <option value="video_audio" selected>Video + Audio</option>
+        <option value="audio_only">Audio Only</option>
+        <option value="screen_share">Screen Sharing</option>
+      </select>
+    </div>
+
+    <div class="button-group">
+      <button id="startBtn" disabled>Start Streaming</button>
+      <button id="stopBtn" disabled>Stop Streaming</button>
+    </div>
+  </div>
+
+  <script type="module" src="publisher.js"></script>
+</body>
+</html>

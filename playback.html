@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stream Selector</title>
+  <link rel="stylesheet" href="./styles/subscriber-style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar for stream selection -->
+    <div class="stream-list-container">
+      <label for="streamTypeToggle">Player Type:</label>
+      <select id="streamTypeToggle">
+        <option value="hls">HLS</option>
+        <option value="dash">DASH</option>
+      </select>
+
+      <label>Available Streams:</label>
+      <ul id="streamList"></ul>
+
+      <button id="watchBtn">▶ Watch Stream</button>
+    </div>
+
+    <!-- Video display -->
+    <div class="video-container">
+      <h2>Stream Preview</h2>
+      <video id="videoPlayer" controls autoplay muted></video>
+    </div>
+  </div>
+
+  <script type="module" src="playback.js"></script>
+</body>
+</html>
